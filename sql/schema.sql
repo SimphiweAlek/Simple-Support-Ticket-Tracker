@@ -1,0 +1,9 @@
+CREATE TABLE tickets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    customer_name VARCHAR(255),
+    priority ENUM('LOW', 'MEDIUM', 'HIGH') DEFAULT 'LOW',
+    status ENUM('OPEN', 'IN_PROGRESS', 'RESOLVED') DEFAULT 'OPEN',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
